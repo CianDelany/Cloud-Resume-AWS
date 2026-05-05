@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cian Delany | IT Support & Infrastructure</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1e293b;
+            --bg-color: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-color); 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 40px 20px; 
+            background-color: var(--bg-color); 
+        }
+
+        .cv-container { 
+            background: white; 
+            padding: 50px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); 
+        }
+
+        header { border-bottom: 3px solid var(--primary-color); padding-bottom: 20px; margin-bottom: 30px; }
+
+        h1 { font-size: 2.5rem; font-weight: 800; color: #0f172a; margin: 0; }
+        h2 { 
+            font-size: 1.25rem; 
+            color: var(--primary-color); 
+            text-transform: uppercase; 
+            letter-spacing: 0.1em; 
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        .contact-info { color: #64748b; font-weight: 500; margin-top: 10px; }
+        .contact-info a { color: var(--primary-color); text-decoration: none; margin-right: 15px; }
+
+        .summary { font-size: 1.05rem; color: #475569; margin: 25px 0; }
+
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; margin-top: 25px; }
+        .job-title { color: #0f172a; font-size: 1.1rem; }
+        .job-date { color: #64748b; font-size: 0.9rem; }
+
+        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+        .skill-tag { background: #f1f5f9; padding: 5px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; }
+
+        ul { padding-left: 1.5rem; }
+        li { margin-bottom: 8px; }
+
+        .project-meta { font-weight: bold; color: #475569; font-size: 0.9rem; }
+
+        @media (max-width: 600px) {
+            .cv-container { padding: 25px; }
+            .job-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-container">
+    <header>
+        <h1>Cian Delany</h1>
+        <div class="contact-info">
+            Dublin, Ireland | 085 874 5344 | 
+            <a href="mailto:CianDelany25@Gmail.com">CianDelany25@Gmail.com</a> | 
+            <a href="https://www.linkedin.com/in/cian-delany-0780a5209/">LinkedIn</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p class="summary">
+            IT support professional with 7 years of experience in helpdesk, incident management, and infrastructure operations. 
+            I'm comfortable owning issues end-to-end in professional services environments, communicating clearly with non-technical stakeholders, 
+            and making sure day-to-day systems stay running smoothly. Currently building hands-on experience with cloud infrastructure 
+            through personal projects and working toward my AWS Solutions Architect Associate.
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <p><strong>IT Support & Operations:</strong></p>
+        <div class="skill-list">
+            <span class="skill-tag">Incident Management</span> <span class="skill-tag">Root-Cause Analysis</span> 
+            <span class="skill-tag">Zendesk / Jira</span> <span class="skill-tag">GDPR Awareness</span>
+        </div>
+        <p><strong>Infrastructure & Systems:</strong></p>
+        <div class="skill-list">
+            <span class="skill-tag">Linux</span> <span class="skill-tag">Windows Server</span> 
+            <span class="skill-tag">Azure AD</span> <span class="skill-tag">Networking Basics</span> 
+            <span class="skill-tag">Server Racking & Config</span>
+        </div>
+        <p><strong>Cloud & Scripting:</strong></p>
+        <div class="skill-list">
+            <span class="skill-tag">AWS (S3, CloudFront, Lambda)</span> <span class="skill-tag">Terraform</span> 
+            <span class="skill-tag">PowerShell</span> <span class="skill-tag">Python (Basic)</span> 
+            <span class="skill-tag">Bash</span> <span class="skill-tag">Git</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Projects</h2>
+        <div class="job-header">
+            <span class="job-title">Serverless Portfolio & Cloud Resume</span>
+            <span class="project-meta">AWS + Terraform</span>
+        </div>
+        <ul>
+            <li>Built a static website hosted on S3 and delivered via CloudFront, with DNS managed through Route 53 and a visitor counter powered by Lambda.</li>
+            <li>Provisioned all infrastructure using Terraform so the environment can be torn down and redeployed entirely from code.</li>
+            <li>Set up a GitHub Actions pipeline to deploy changes to S3 automatically on push to main.</li>
+            <li>Added basic CloudWatch monitoring to track availability and errors.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="job-header">
+            <span class="job-title">IT Operations Engineer | Azets Ireland</span>
+            <span class="job-date">Nov 2022 – Present</span>
+        </div>
+        <ul>
+            <li>Primary IT support for a 200+ seat professional services firm, handling hardware, software, networking, and user account issues day-to-day.</li>
+            <li>Main escalation point for complex technical incidents; responsible for diagnosing issues and communicating clearly with non-technical staff and management.</li>
+            <li>Provision, rack, and configure physical server hardware and manage Azure AD for identity across the organisation.</li>
+            <li>Automated some routine maintenance tasks using Python and PowerShell scripts to reduce manual work.</li>
+            <li>Supported IT continuity through three company acquisitions and associated infrastructure changes.</li>
+        </ul>
+
+        <div class="job-header">
+            <span class="job-title">Technical Support Analyst | Accenture (Meta Global Services)</span>
+            <span class="job-date">Jun 2019 – Oct 2022</span>
+        </div>
+        <ul>
+            <li>Provided technical support and handled content policy escalations for Meta's global advertising platform in a high-volume, SLA-driven environment.</li>
+            <li>Promoted from Content Moderation to Technical Support Analyst in 2022 based on performance and technical aptitude.</li>
+            <li>Maintained high ticket accuracy across large queues using bespoke internal tooling.</li>
+            <li>Worked with engineering and policy teams to surface and escalate recurring platform issues.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education & Certifications</h2>
+        <ul>
+            <li><strong>B.Sc (Hons) Computer Science (2:1)</strong> | Griffith College Dublin</li>
+            <li><strong>AWS Certified Cloud Practitioner</strong> | 2025</li>
+            <li><strong>AWS Certified Solutions Architect – Associate</strong> | In Progress (Expected Q3 2026)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Personal Interests</h2>
+        <p>
+            Outside of work, I'm into <strong>PC Building</strong> (maintaining my own custom build since 2016), <strong>Tabletop Gaming</strong> like D&D, 
+            and I'm currently teaching myself <strong>Japanese</strong> with a goal of reaching N2 fluency. I also try to get outside for running and swimming when I can.
+        </p>
+    </section>
+    <section>
+        <p style="text-align: center; color: #64748b; font-weight: bold; margin-top: 50px; border-top: 1px solid var(--border-color); padding-top: 20px;">
+            Total Visitors: <span id="counter">Loading...</span>
+        </p>
+    </section>
+    <script>
+        // Replace the URL below with your actual api_url from Terraform output
+        const api_url = "https://egg5w36o5i.execute-api.us-east-1.amazonaws.com/visitors";
+    
+        async function getCounter() {
+            try {
+                let response = await fetch(api_url);
+                let data = await response.json();
+                document.getElementById('counter').innerText = data.count;
+            } catch (err) {
+                console.error("Error fetching counter:", err);
+                document.getElementById('counter').innerText = "Couldn't load";
+            }
+        }
+        getCounter();
+    </script>
+</div>
+</body>
+</html>
