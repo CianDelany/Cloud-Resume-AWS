@@ -1,6 +1,19 @@
-# 1. The Storage (S3)
+# 0. Creating a tf state vault for terraform and github
+terraform {
+  backend "s3" {
+    bucket         = "cian-terraform-state-vault" # Create this bucket MANUALLY in the AWS Console first!
+    key            = "terraform.tfstate"
+    region         = "eu-north-1"
+  }
+}
+
+provider "aws" {
+  region = "eu-north-1"
+}
+
+# 1. The Storage (S3) - THIS STAYS!
 resource "aws_s3_bucket" "cv_bucket" {
-  bucket = "cian-delany-cv-2026" # Must be unique
+  bucket = "cian-delany-cv-2026" 
 }
 
 # 2. The File Upload
